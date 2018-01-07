@@ -1,5 +1,39 @@
-.add {
-    float: right;
-    height: 50px;
-    width: 100px;
-}
+
+body {
+    background: linear-gradient(45deg, gray, black);
+    color: #ffffff;
+  }
+  
+  
+  .container {
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+  }
+  
+  
+  button.actor {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      width: 82px;
+      transition: 3s;
+      border-radius: 12%;
+      background: #fff;
+      border: 2px solid #9b3fa5;
+      color: #9b3fa5;
+      letter-spacing:1px;
+  }
+  
+  
+  .wrapper {
+      float: right;
+      width: 25%;
+  }
+  
+  img.gif {
+      width: 250px;
+      position: relative;
+      overflow: auto; 
+  }
+  
+  

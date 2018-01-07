@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="assets/style.css" type="text/css">
 </head>
 <body>
-    <div class="button-section"></div>
-    <div class="images"></div>
-    <div class="add">
-        <form action="" id="add-input"></form>
-        <button id="add-button">Add Actor</button>
-    </div>
+    <div class="container">
+        
+            <div id="buttons"></div>
     
+            <div class="wrapper">
+                <form id= "actor-form">
+                    <label for="actor-input"> Add an Actor </label>
+                    <input type="text" id="actor-input">
+                    <input id="add-actor" type="submit" value="submit">
+                </form>
+            </div>
+    
+                <div id="gif-section"></div>
+        </div>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
