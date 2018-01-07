@@ -1,13 +1,15 @@
 
-var apiKey = X97PzdwnxCU8mvCqTGElRK0D1hU0gpGM
-var limit = 10;
-var rating = pg;
+var apiKey = "X97PzdwnxCU8mvCqTGElRK0D1hU0gpGM" //my key
+var limit = 10; //limit
+var rating = "pg"; //gif rating
+var searchTarget = "";//tag
+var actorArray = ["Arnold"];
 
-var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "?q=" + "?limit=" + limit + "?rating=" + rating;
+var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&limit=" + limit + "&rating=" + rating + "&tag=" + "arnold";
 // q
 // limit 
 // rating
-
+function runSearch(limit, queryURL) {
 $.ajax({
     url: queryURL,
     method: "GET"
@@ -15,17 +17,19 @@ $.ajax({
 
 .done(function(response){
     //save image URL proprety
-    var imageURL = response.etc;
+    console.log("url: " + queryURL);
+    console.log(response);
+    var imageURL = response.data.image_originalurl;
     //create and store image tag
     var actorImage = $("<img>");
     //set image src to 
     actorImage.attr("src", imageUrl);
-    actorImage.attr("alt", "actor image");
+    actorImage.attr("alt", searchTarget +" actor image");
     // prepend
     $(".images").prepend(actorImage);
 
 })
-
+}
 
 $(document).ready(function() {
     $("#add-button").on('click', function(){
