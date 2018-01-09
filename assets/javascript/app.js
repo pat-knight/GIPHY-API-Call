@@ -70,7 +70,6 @@ $('#add-actor').on("click", function(event) {
   //stop creating empty button
   if (!(newActor == '')) {
     } else {
-  alert("Please Fill In The Animal You Want To See.");
   newActor.stop()
   }
   actorArray.push(newActor);
