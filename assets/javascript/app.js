@@ -68,9 +68,10 @@ $('#add-actor').on("click", function(event) {
   var newActor = $('#actor-input').val().trim();
   console.log(newActor);
   //stop creating empty button
-  if (!(newActor == '')) {
+  if (!newActor == '') {
     } else {
-  newActor.stop()
+  newActor.stop();
+  alert("Please enter some text");
   }
   actorArray.push(newActor);
   renderButton();
